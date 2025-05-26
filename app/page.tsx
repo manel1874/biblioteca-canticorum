@@ -518,278 +518,280 @@ export default function BibliotecaMusicaLiturgica() {
                   </Badge>
                 </Button>
               </SheetTrigger>
-              <SheetContent className="w-full sm:w-[500px] md:w-[600px] max-w-full">
-                <SheetHeader className="pb-4">
+              <SheetContent className="w-full sm:w-[500px] md:w-[600px] max-w-full flex flex-col">
+                <SheetHeader className="pb-4 flex-shrink-0">
                   <SheetTitle className="text-lg sm:text-xl">Construtor de Missa</SheetTitle>
                 </SheetHeader>
-                <div className="flex justify-end mt-2 mb-4">
+                <div className="flex justify-end mt-2 mb-4 flex-shrink-0">
                   <Button onClick={exportarMissaPDF} size="sm" className="w-full sm:w-auto">
                     <Download className="h-4 w-4 mr-2" />
                     Exportar PDF
                   </Button>
                 </div>
 
-                <div className="mt-6">
-                  <Tabs defaultValue="automatico" className="w-full">
-                    <TabsList className="grid w-full grid-cols-3 h-auto">
-                      <TabsTrigger value="automatico" className="text-xs sm:text-sm px-2 py-2">
-                        Automático
-                      </TabsTrigger>
-                      <TabsTrigger value="repertorio" className="text-xs sm:text-sm px-2 py-2">
-                        Repertório
-                      </TabsTrigger>
-                      <TabsTrigger value="resumo" className="text-xs sm:text-sm px-2 py-2">
-                        Resumo
-                      </TabsTrigger>
-                    </TabsList>
+                <ScrollArea className="flex-1 -mx-6 px-6">
+                  <div className="mt-6">
+                    <Tabs defaultValue="automatico" className="w-full">
+                      <TabsList className="grid w-full grid-cols-3 h-auto">
+                        <TabsTrigger value="automatico" className="text-xs sm:text-sm px-2 py-2">
+                          Automático
+                        </TabsTrigger>
+                        <TabsTrigger value="repertorio" className="text-xs sm:text-sm px-2 py-2">
+                          Repertório
+                        </TabsTrigger>
+                        <TabsTrigger value="resumo" className="text-xs sm:text-sm px-2 py-2">
+                          Resumo
+                        </TabsTrigger>
+                      </TabsList>
 
-                    <TabsContent value="automatico" className="mt-4 px-1">
-                      <div className="space-y-4">
-                        <div className="text-center">
-                          <h3 className="text-lg font-medium mb-2">Gerador Automático de Missa</h3>
-                          <p className="text-sm text-muted-foreground mb-4">
-                            Selecione um nível de dificuldade e gere automaticamente uma missa completa
-                          </p>
-                        </div>
-
+                      <TabsContent value="automatico" className="mt-4 px-1">
                         <div className="space-y-4">
-                          <div className="space-y-4">
-                            <div>
-                              <label className="text-sm font-medium mb-2 block">Níveis de Dificuldade</label>
-                              <div className="space-y-2">
-                                <div className="flex items-center space-x-2">
-                                  <input
-                                    type="checkbox"
-                                    id="todos-niveis"
-                                    checked={niveisAutomaticos.length === 0}
-                                    onChange={(e) => {
-                                      if (e.target.checked) {
-                                        setNiveisAutomaticos([])
-                                      }
-                                    }}
-                                    className="rounded"
-                                  />
-                                  <label htmlFor="todos-niveis" className="text-sm">
-                                    Todos os Níveis
-                                  </label>
-                                </div>
-                                {niveis.map((nivel) => (
-                                  <div key={nivel} className="flex items-center space-x-2">
-                                    <input
-                                      type="checkbox"
-                                      id={`nivel-${nivel}`}
-                                      checked={niveisAutomaticos.includes(nivel)}
-                                      onChange={(e) => {
-                                        if (e.target.checked) {
-                                          setNiveisAutomaticos([...niveisAutomaticos, nivel])
-                                        } else {
-                                          setNiveisAutomaticos(niveisAutomaticos.filter((n) => n !== nivel))
-                                        }
-                                      }}
-                                      className="rounded"
-                                    />
-                                    <label htmlFor={`nivel-${nivel}`} className="text-sm">
-                                      {nivel}
-                                    </label>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-
-                            <div>
-                              <label className="text-sm font-medium mb-2 block">Estilos Musicais</label>
-                              <div className="space-y-2">
-                                <div className="flex items-center space-x-2">
-                                  <input
-                                    type="checkbox"
-                                    id="todos-estilos"
-                                    checked={estilosAutomaticos.length === 0}
-                                    onChange={(e) => {
-                                      if (e.target.checked) {
-                                        setEstilosAutomaticos([])
-                                      }
-                                    }}
-                                    className="rounded"
-                                  />
-                                  <label htmlFor="todos-estilos" className="text-sm">
-                                    Todos os Estilos
-                                  </label>
-                                </div>
-                                {estilos.map((estilo) => (
-                                  <div key={estilo} className="flex items-center space-x-2">
-                                    <input
-                                      type="checkbox"
-                                      id={`estilo-${estilo}`}
-                                      checked={estilosAutomaticos.includes(estilo)}
-                                      onChange={(e) => {
-                                        if (e.target.checked) {
-                                          setEstilosAutomaticos([...estilosAutomaticos, estilo])
-                                        } else {
-                                          setEstilosAutomaticos(estilosAutomaticos.filter((e) => e !== estilo))
-                                        }
-                                      }}
-                                      className="rounded"
-                                    />
-                                    <label htmlFor={`estilo-${estilo}`} className="text-sm">
-                                      {estilo}
-                                    </label>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
+                          <div className="text-center">
+                            <h3 className="text-lg font-medium mb-2">Gerador Automático de Missa</h3>
+                            <p className="text-sm text-muted-foreground mb-4">
+                              Selecione um nível de dificuldade e gere automaticamente uma missa completa
+                            </p>
                           </div>
 
-                          <div className="flex flex-col space-y-2">
-                            <Button onClick={gerarMissaAutomatica} className="w-full">
-                              <Music className="h-4 w-4 mr-2" />
-                              Gerar Missa Automática
-                            </Button>
-                            <p className="text-xs text-muted-foreground text-center">
-                              Isso substituirá o repertório atual
-                            </p>
+                          <div className="space-y-4">
+                            <div className="space-y-4">
+                              <div>
+                                <label className="text-sm font-medium mb-2 block">Níveis de Dificuldade</label>
+                                <div className="space-y-2">
+                                  <div className="flex items-center space-x-2">
+                                    <input
+                                      type="checkbox"
+                                      id="todos-niveis"
+                                      checked={niveisAutomaticos.length === 0}
+                                      onChange={(e) => {
+                                        if (e.target.checked) {
+                                          setNiveisAutomaticos([])
+                                        }
+                                      }}
+                                      className="rounded"
+                                    />
+                                    <label htmlFor="todos-niveis" className="text-sm">
+                                      Todos os Níveis
+                                    </label>
+                                  </div>
+                                  {niveis.map((nivel) => (
+                                    <div key={nivel} className="flex items-center space-x-2">
+                                      <input
+                                        type="checkbox"
+                                        id={`nivel-${nivel}`}
+                                        checked={niveisAutomaticos.includes(nivel)}
+                                        onChange={(e) => {
+                                          if (e.target.checked) {
+                                            setNiveisAutomaticos([...niveisAutomaticos, nivel])
+                                          } else {
+                                            setNiveisAutomaticos(niveisAutomaticos.filter((n) => n !== nivel))
+                                          }
+                                        }}
+                                        className="rounded"
+                                      />
+                                      <label htmlFor={`nivel-${nivel}`} className="text-sm">
+                                        {nivel}
+                                      </label>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+
+                              <div>
+                                <label className="text-sm font-medium mb-2 block">Estilos Musicais</label>
+                                <div className="space-y-2">
+                                  <div className="flex items-center space-x-2">
+                                    <input
+                                      type="checkbox"
+                                      id="todos-estilos"
+                                      checked={estilosAutomaticos.length === 0}
+                                      onChange={(e) => {
+                                        if (e.target.checked) {
+                                          setEstilosAutomaticos([])
+                                        }
+                                      }}
+                                      className="rounded"
+                                    />
+                                    <label htmlFor="todos-estilos" className="text-sm">
+                                      Todos os Estilos
+                                    </label>
+                                  </div>
+                                  {estilos.map((estilo) => (
+                                    <div key={estilo} className="flex items-center space-x-2">
+                                      <input
+                                        type="checkbox"
+                                        id={`estilo-${estilo}`}
+                                        checked={estilosAutomaticos.includes(estilo)}
+                                        onChange={(e) => {
+                                          if (e.target.checked) {
+                                            setEstilosAutomaticos([...estilosAutomaticos, estilo])
+                                          } else {
+                                            setEstilosAutomaticos(estilosAutomaticos.filter((e) => e !== estilo))
+                                          }
+                                        }}
+                                        className="rounded"
+                                      />
+                                      <label htmlFor={`estilo-${estilo}`} className="text-sm">
+                                        {estilo}
+                                      </label>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+
+                            <div className="flex flex-col space-y-2">
+                              <Button onClick={gerarMissaAutomatica} className="w-full">
+                                <Music className="h-4 w-4 mr-2" />
+                                Gerar Missa Automática
+                              </Button>
+                              <p className="text-xs text-muted-foreground text-center">
+                                Isso substituirá o repertório atual
+                              </p>
+                            </div>
+
+                            <Separator />
+
+                            <div className="space-y-2">
+                              <h4 className="font-medium text-sm">Como funciona:</h4>
+                              <ul className="text-xs text-muted-foreground space-y-1">
+                                <li>• Seleciona automaticamente uma música para cada tipo litúrgico</li>
+                                <li>• Filtra por níveis e estilos selecionados</li>
+                                <li>• Use "Todos" para incluir todas as opções disponíveis</li>
+                                <li>• Combina múltiplos níveis e estilos conforme selecionado</li>
+                                <li>• Gera uma missa personalizada em segundos</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </TabsContent>
+
+                      <TabsContent value="repertorio" className="mt-4 px-1">
+                        <ScrollArea className="h-[50vh] sm:h-[60vh]">
+                          <div className="space-y-2">
+                            {tiposLiturgicos.map((tipo) => {
+                              const partituras = repertorioMissa[tipo] || []
+                              const temPartituras = partituras.length > 0
+                              const expandido = tiposExpandidos[tipo] || false
+
+                              return (
+                                <Card
+                                  key={tipo}
+                                  className={`${temPartituras ? "border-green-200 bg-green-50/50" : "border-gray-200"}`}
+                                >
+                                  <Collapsible open={expandido} onOpenChange={() => toggleTipoExpandido(tipo)}>
+                                    <CollapsibleTrigger asChild>
+                                      <CardHeader className="pb-2 cursor-pointer hover:bg-gray-50/50">
+                                        <div className="flex items-center justify-between">
+                                          <div className="flex items-center space-x-2">
+                                            {temPartituras ? (
+                                              <Check className="h-4 w-4 text-green-600" />
+                                            ) : (
+                                              <AlertCircle className="h-4 w-4 text-gray-400" />
+                                            )}
+                                            <CardTitle className="text-sm font-medium">{tipo}</CardTitle>
+                                            <Badge variant="secondary" className="text-xs">
+                                              {partituras.length}
+                                            </Badge>
+                                          </div>
+                                          {expandido ? (
+                                            <ChevronDown className="h-4 w-4" />
+                                          ) : (
+                                            <ChevronRight className="h-4 w-4" />
+                                          )}
+                                        </div>
+                                      </CardHeader>
+                                    </CollapsibleTrigger>
+                                    <CollapsibleContent>
+                                      <CardContent className="pt-0">
+                                        {partituras.length > 0 ? (
+                                          <DndContext
+                                            sensors={sensors}
+                                            collisionDetection={closestCenter}
+                                            onDragEnd={(event) => handleDragEnd(event, tipo)}
+                                          >
+                                            <SortableContext
+                                              items={partituras.map((p) => p.id)}
+                                              strategy={verticalListSortingStrategy}
+                                            >
+                                              <div className="space-y-2">
+                                                {partituras.map((partitura) => (
+                                                  <SortableItem
+                                                    key={partitura.id}
+                                                    partitura={partitura}
+                                                    tipo={tipo}
+                                                    onRemove={removerDoTipo}
+                                                  />
+                                                ))}
+                                              </div>
+                                            </SortableContext>
+                                          </DndContext>
+                                        ) : (
+                                          <p className="text-sm text-muted-foreground italic">
+                                            Nenhuma partitura selecionada para {tipo.toLowerCase()}
+                                          </p>
+                                        )}
+                                      </CardContent>
+                                    </CollapsibleContent>
+                                  </Collapsible>
+                                </Card>
+                              )
+                            })}
+                          </div>
+                        </ScrollArea>
+                      </TabsContent>
+
+                      <TabsContent value="resumo" className="mt-4 px-1">
+                        <div className="space-y-4">
+                          <div className="text-center">
+                            <div className="text-2xl font-bold text-green-600">
+                              {tiposCobertos}/{totalTipos}
+                            </div>
+                            <p className="text-sm text-muted-foreground">Tipos litúrgicos cobertos</p>
+                          </div>
+
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                            {tiposLiturgicos.map((tipo) => (
+                              <div
+                                key={tipo}
+                                className={`flex items-center space-x-2 p-2 rounded ${
+                                  tipoTemPartituras(tipo) ? "bg-green-100 text-green-800" : "bg-gray-100 text-gray-600"
+                                }`}
+                              >
+                                {tipoTemPartituras(tipo) ? (
+                                  <Check className="h-3 w-3" />
+                                ) : (
+                                  <AlertCircle className="h-3 w-3" />
+                                )}
+                                <span>{tipo}</span>
+                              </div>
+                            ))}
                           </div>
 
                           <Separator />
 
                           <div className="space-y-2">
-                            <h4 className="font-medium text-sm">Como funciona:</h4>
-                            <ul className="text-xs text-muted-foreground space-y-1">
-                              <li>• Seleciona automaticamente uma música para cada tipo litúrgico</li>
-                              <li>• Filtra por níveis e estilos selecionados</li>
-                              <li>• Use "Todos" para incluir todas as opções disponíveis</li>
-                              <li>• Combina múltiplos níveis e estilos conforme selecionado</li>
-                              <li>• Gera uma missa personalizada em segundos</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </TabsContent>
-
-                    <TabsContent value="repertorio" className="mt-4 px-1">
-                      <ScrollArea className="h-[calc(100vh-300px)] sm:h-[calc(100vh-200px)]">
-                        <div className="space-y-2">
-                          {tiposLiturgicos.map((tipo) => {
-                            const partituras = repertorioMissa[tipo] || []
-                            const temPartituras = partituras.length > 0
-                            const expandido = tiposExpandidos[tipo] || false
-
-                            return (
-                              <Card
-                                key={tipo}
-                                className={`${temPartituras ? "border-green-200 bg-green-50/50" : "border-gray-200"}`}
-                              >
-                                <Collapsible open={expandido} onOpenChange={() => toggleTipoExpandido(tipo)}>
-                                  <CollapsibleTrigger asChild>
-                                    <CardHeader className="pb-2 cursor-pointer hover:bg-gray-50/50">
-                                      <div className="flex items-center justify-between">
-                                        <div className="flex items-center space-x-2">
-                                          {temPartituras ? (
-                                            <Check className="h-4 w-4 text-green-600" />
-                                          ) : (
-                                            <AlertCircle className="h-4 w-4 text-gray-400" />
-                                          )}
-                                          <CardTitle className="text-sm font-medium">{tipo}</CardTitle>
-                                          <Badge variant="secondary" className="text-xs">
-                                            {partituras.length}
-                                          </Badge>
-                                        </div>
-                                        {expandido ? (
-                                          <ChevronDown className="h-4 w-4" />
-                                        ) : (
-                                          <ChevronRight className="h-4 w-4" />
-                                        )}
-                                      </div>
-                                    </CardHeader>
-                                  </CollapsibleTrigger>
-                                  <CollapsibleContent>
-                                    <CardContent className="pt-0">
-                                      {partituras.length > 0 ? (
-                                        <DndContext
-                                          sensors={sensors}
-                                          collisionDetection={closestCenter}
-                                          onDragEnd={(event) => handleDragEnd(event, tipo)}
-                                        >
-                                          <SortableContext
-                                            items={partituras.map((p) => p.id)}
-                                            strategy={verticalListSortingStrategy}
-                                          >
-                                            <div className="space-y-2">
-                                              {partituras.map((partitura) => (
-                                                <SortableItem
-                                                  key={partitura.id}
-                                                  partitura={partitura}
-                                                  tipo={tipo}
-                                                  onRemove={removerDoTipo}
-                                                />
-                                              ))}
-                                            </div>
-                                          </SortableContext>
-                                        </DndContext>
-                                      ) : (
-                                        <p className="text-sm text-muted-foreground italic">
-                                          Nenhuma partitura selecionada para {tipo.toLowerCase()}
-                                        </p>
-                                      )}
-                                    </CardContent>
-                                  </CollapsibleContent>
-                                </Collapsible>
-                              </Card>
-                            )
-                          })}
-                        </div>
-                      </ScrollArea>
-                    </TabsContent>
-
-                    <TabsContent value="resumo" className="mt-4 px-1">
-                      <div className="space-y-4">
-                        <div className="text-center">
-                          <div className="text-2xl font-bold text-green-600">
-                            {tiposCobertos}/{totalTipos}
-                          </div>
-                          <p className="text-sm text-muted-foreground">Tipos litúrgicos cobertos</p>
-                        </div>
-
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                          {tiposLiturgicos.map((tipo) => (
-                            <div
-                              key={tipo}
-                              className={`flex items-center space-x-2 p-2 rounded ${
-                                tipoTemPartituras(tipo) ? "bg-green-100 text-green-800" : "bg-gray-100 text-gray-600"
-                              }`}
-                            >
-                              {tipoTemPartituras(tipo) ? (
-                                <Check className="h-3 w-3" />
-                              ) : (
-                                <AlertCircle className="h-3 w-3" />
-                              )}
-                              <span>{tipo}</span>
-                            </div>
-                          ))}
-                        </div>
-
-                        <Separator />
-
-                        <div className="space-y-2">
-                          <h4 className="font-medium">Estatísticas</h4>
-                          <div className="text-sm space-y-1">
-                            <div className="flex justify-between">
-                              <span>Total de partituras:</span>
-                              <span>{Object.values(repertorioMissa).flat().length}</span>
-                            </div>
-                            <div className="flex justify-between">
-                              <span>Tipos cobertos:</span>
-                              <span>{tiposCobertos}</span>
-                            </div>
-                            <div className="flex justify-between">
-                              <span>Tipos em falta:</span>
-                              <span>{totalTipos - tiposCobertos}</span>
+                            <h4 className="font-medium">Estatísticas</h4>
+                            <div className="text-sm space-y-1">
+                              <div className="flex justify-between">
+                                <span>Total de partituras:</span>
+                                <span>{Object.values(repertorioMissa).flat().length}</span>
+                              </div>
+                              <div className="flex justify-between">
+                                <span>Tipos cobertos:</span>
+                                <span>{tiposCobertos}</span>
+                              </div>
+                              <div className="flex justify-between">
+                                <span>Tipos em falta:</span>
+                                <span>{totalTipos - tiposCobertos}</span>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </TabsContent>
-                  </Tabs>
-                </div>
+                      </TabsContent>
+                    </Tabs>
+                  </div>
+                </ScrollArea>
               </SheetContent>
             </Sheet>
           </div>
