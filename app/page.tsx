@@ -323,7 +323,7 @@ function SortableItem({ partitura, tipo, onRemove }: SortableItemProps) {
   )
 }
 
-export default function BibliotecaMusicaLiturgica() {
+export default function BibliotecaCanticorum() {
   const [termoPesquisa, setTermoPesquisa] = useState("")
   const [estiloSelecionado, setEstiloSelecionado] = useState("todos")
   const [tipoSelecionado, setTipoSelecionado] = useState("todos")
