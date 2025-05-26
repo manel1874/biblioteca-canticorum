@@ -82,7 +82,7 @@ const partiturasExemplo: PartituraMusical[] = [
     tipoLiturgico: ["Acto penitencial"],
     nivel: "Avançado",
     urlAudio: "https://www.youtube.com/watch?v=xoX-PLEjQt8",
-    urlPdf: "biblio/test.pdf",
+    urlPdf: "/placeholder-score.pdf",
     descricao: "Uma bela composição do Kyrie em estilo barroco tradicional",
     duracao: "3:45",
   },
@@ -94,7 +94,7 @@ const partiturasExemplo: PartituraMusical[] = [
     tipoLiturgico: ["Santo"],
     nivel: "Intermediário",
     urlAudio: "https://www.youtube.com/watch?v=xoX-PLEjQt8",
-    urlPdf: "biblio/test.pdf",
+    urlPdf: "/placeholder-score.pdf",
     descricao: "Elegante composição clássica adequada para Missa dominical",
     duracao: "4:20",
   },
@@ -106,7 +106,7 @@ const partiturasExemplo: PartituraMusical[] = [
     tipoLiturgico: ["Aclamação do Evangelho"],
     nivel: "Avançado",
     urlAudio: "https://www.youtube.com/watch?v=xoX-PLEjQt8",
-    urlPdf: "biblio/test.pdf",
+    urlPdf: "/placeholder-score.pdf",
     descricao: "Aleluia polifônico tradicional para o tempo pascal",
     duracao: "2:30",
   },
@@ -118,7 +118,7 @@ const partiturasExemplo: PartituraMusical[] = [
     tipoLiturgico: ["Cordeiro de Deus"],
     nivel: "Intermediário",
     urlAudio: "https://www.youtube.com/watch?v=xoX-PLEjQt8",
-    urlPdf: "biblio/test.pdf",
+    urlPdf: "/placeholder-score.pdf",
     descricao: "Composição suave e contemplativa do Requiem",
     duracao: "5:15",
   },
@@ -130,7 +130,7 @@ const partiturasExemplo: PartituraMusical[] = [
     tipoLiturgico: ["Glória"],
     nivel: "Avançado",
     urlAudio: "https://www.youtube.com/watch?v=xoX-PLEjQt8",
-    urlPdf: "biblio/test.pdf",
+    urlPdf: "/placeholder-score.pdf",
     descricao: "Composição alegre e triunfante do Glória",
     duracao: "6:30",
   },
@@ -142,7 +142,7 @@ const partiturasExemplo: PartituraMusical[] = [
     tipoLiturgico: ["Acto penitencial"],
     nivel: "Iniciante",
     urlAudio: "https://www.youtube.com/watch?v=xoX-PLEjQt8",
-    urlPdf: "biblio/test.pdf",
+    urlPdf: "/placeholder-score.pdf",
     descricao: "Composição fácil de aprender para coros paroquiais",
     duracao: "2:00",
   },
@@ -154,7 +154,7 @@ const partiturasExemplo: PartituraMusical[] = [
     tipoLiturgico: ["Credo"],
     nivel: "Avançado",
     urlAudio: "https://www.youtube.com/watch?v=xoX-PLEjQt8",
-    urlPdf: "biblio/test.pdf",
+    urlPdf: "/placeholder-score.pdf",
     descricao: "Poderosa declaração de fé da Missa Solemnis",
     duracao: "8:45",
   },
@@ -166,7 +166,7 @@ const partiturasExemplo: PartituraMusical[] = [
     tipoLiturgico: ["Comunhão"],
     nivel: "Intermediário",
     urlAudio: "https://www.youtube.com/watch?v=xoX-PLEjQt8",
-    urlPdf: "biblio/test.pdf",
+    urlPdf: "/placeholder-score.pdf",
     descricao: "Belo hino de comunhão para ocasiões especiais",
     duracao: "4:00",
   },
@@ -178,7 +178,7 @@ const partiturasExemplo: PartituraMusical[] = [
     tipoLiturgico: ["Entrada", "Ofertório", "Comunhão"],
     nivel: "Intermediário",
     urlAudio: "https://www.youtube.com/watch?v=xoX-PLEjQt8",
-    urlPdf: "biblio/test.pdf",
+    urlPdf: "/placeholder-score.pdf",
     descricao: "Clássica oração mariana em melodia sublime, adequada para vários momentos da liturgia",
     duracao: "3:30",
   },
@@ -190,7 +190,7 @@ const partiturasExemplo: PartituraMusical[] = [
     tipoLiturgico: ["Acção de Graças", "Final"],
     nivel: "Avançado",
     urlAudio: "https://www.youtube.com/watch?v=xoX-PLEjQt8",
-    urlPdf: "biblio/test.pdf",
+    urlPdf: "/placeholder-score.pdf",
     descricao: "Majestoso hino de louvor e ação de graças",
     duracao: "7:15",
   },
@@ -202,7 +202,7 @@ const partiturasExemplo: PartituraMusical[] = [
     tipoLiturgico: ["Entrada", "Consagração"],
     nivel: "Iniciante",
     urlAudio: "https://www.youtube.com/watch?v=xoX-PLEjQt8",
-    urlPdf: "biblio/test.pdf",
+    urlPdf: "/placeholder-score.pdf",
     descricao: "Antigo hino ao Espírito Santo em canto gregoriano",
     duracao: "4:45",
   },
@@ -214,7 +214,7 @@ const partiturasExemplo: PartituraMusical[] = [
     tipoLiturgico: ["Final"],
     nivel: "Intermediário",
     urlAudio: "https://www.youtube.com/watch?v=xoX-PLEjQt8",
-    urlPdf: "biblio/test.pdf",
+    urlPdf: "/placeholder-score.pdf",
     descricao: "Antífona mariana em estilo barroco expressivo",
     duracao: "5:00",
   },
@@ -226,7 +226,7 @@ const partiturasExemplo: PartituraMusical[] = [
     tipoLiturgico: ["Salmo"],
     nivel: "Iniciante",
     urlAudio: "https://www.youtube.com/watch?v=xoX-PLEjQt8",
-    urlPdf: "biblio/test.pdf",
+    urlPdf: "/placeholder-score.pdf",
     descricao: "O Senhor é meu pastor, nada me faltará",
     duracao: "2:45",
   },
@@ -238,7 +238,7 @@ const partiturasExemplo: PartituraMusical[] = [
     tipoLiturgico: ["Entrada"],
     nivel: "Iniciante",
     urlAudio: "https://www.youtube.com/watch?v=xoX-PLEjQt8",
-    urlPdf: "biblio/test.pdf",
+    urlPdf: "/placeholder-score.pdf",
     descricao: "Canto alegre para a entrada da Missa pascal",
     duracao: "3:15",
   },
@@ -250,7 +250,7 @@ const partiturasExemplo: PartituraMusical[] = [
     tipoLiturgico: ["Consagração", "Santo"],
     nivel: "Intermediário",
     urlAudio: "https://www.youtube.com/watch?v=xoX-PLEjQt8",
-    urlPdf: "biblio/test.pdf",
+    urlPdf: "/placeholder-score.pdf",
     descricao: "Música para acompanhar a oração eucarística",
     duracao: "6:00",
   },
@@ -262,7 +262,7 @@ const partiturasExemplo: PartituraMusical[] = [
     tipoLiturgico: ["Consentimento"],
     nivel: "Iniciante",
     urlAudio: "https://www.youtube.com/watch?v=xoX-PLEjQt8",
-    urlPdf: "biblio/test.pdf",
+    urlPdf: "/placeholder-score.pdf",
     descricao: "Música para o momento do consentimento matrimonial",
     duracao: "2:30",
   },
@@ -274,7 +274,7 @@ const partiturasExemplo: PartituraMusical[] = [
     tipoLiturgico: ["Consentimento"],
     nivel: "Iniciante",
     urlAudio: "https://www.youtube.com/watch?v=xoX-PLEjQt8",
-    urlPdf: "biblio/test.pdf",
+    urlPdf: "/placeholder-score.pdf",
     descricao: "Canção moderna para cerimônias de casamento",
     duracao: "3:00",
   },
@@ -323,7 +323,7 @@ function SortableItem({ partitura, tipo, onRemove }: SortableItemProps) {
   )
 }
 
-export default function BibliotecaCanticorum() {
+export default function BibliotecaMusicaLiturgica() {
   const [termoPesquisa, setTermoPesquisa] = useState("")
   const [estiloSelecionado, setEstiloSelecionado] = useState("todos")
   const [tipoSelecionado, setTipoSelecionado] = useState("todos")
@@ -518,12 +518,12 @@ export default function BibliotecaCanticorum() {
                   </Badge>
                 </Button>
               </SheetTrigger>
-              <SheetContent className="w-[500px] sm:w-[600px]">
-                <SheetHeader>
-                  <SheetTitle>Construtor de Missa</SheetTitle>
+              <SheetContent className="w-full sm:w-[500px] md:w-[600px] max-w-full">
+                <SheetHeader className="pb-4">
+                  <SheetTitle className="text-lg sm:text-xl">Construtor de Missa</SheetTitle>
                 </SheetHeader>
-                <div className="flex justify-end mt-4">
-                  <Button onClick={exportarMissaPDF} size="sm">
+                <div className="flex justify-end mt-2 mb-4">
+                  <Button onClick={exportarMissaPDF} size="sm" className="w-full sm:w-auto">
                     <Download className="h-4 w-4 mr-2" />
                     Exportar PDF
                   </Button>
@@ -531,13 +531,19 @@ export default function BibliotecaCanticorum() {
 
                 <div className="mt-6">
                   <Tabs defaultValue="automatico" className="w-full">
-                    <TabsList className="grid w-full grid-cols-3">
-                      <TabsTrigger value="automatico">Automático</TabsTrigger>
-                      <TabsTrigger value="repertorio">Repertório</TabsTrigger>
-                      <TabsTrigger value="resumo">Resumo</TabsTrigger>
+                    <TabsList className="grid w-full grid-cols-3 h-auto">
+                      <TabsTrigger value="automatico" className="text-xs sm:text-sm px-2 py-2">
+                        Automático
+                      </TabsTrigger>
+                      <TabsTrigger value="repertorio" className="text-xs sm:text-sm px-2 py-2">
+                        Repertório
+                      </TabsTrigger>
+                      <TabsTrigger value="resumo" className="text-xs sm:text-sm px-2 py-2">
+                        Resumo
+                      </TabsTrigger>
                     </TabsList>
 
-                    <TabsContent value="automatico" className="mt-4">
+                    <TabsContent value="automatico" className="mt-4 px-1">
                       <div className="space-y-4">
                         <div className="text-center">
                           <h3 className="text-lg font-medium mb-2">Gerador Automático de Missa</h3>
@@ -659,8 +665,8 @@ export default function BibliotecaCanticorum() {
                       </div>
                     </TabsContent>
 
-                    <TabsContent value="repertorio" className="mt-4">
-                      <ScrollArea className="h-[calc(100vh-200px)]">
+                    <TabsContent value="repertorio" className="mt-4 px-1">
+                      <ScrollArea className="h-[calc(100vh-300px)] sm:h-[calc(100vh-200px)]">
                         <div className="space-y-2">
                           {tiposLiturgicos.map((tipo) => {
                             const partituras = repertorioMissa[tipo] || []
@@ -734,7 +740,7 @@ export default function BibliotecaCanticorum() {
                       </ScrollArea>
                     </TabsContent>
 
-                    <TabsContent value="resumo" className="mt-4">
+                    <TabsContent value="resumo" className="mt-4 px-1">
                       <div className="space-y-4">
                         <div className="text-center">
                           <div className="text-2xl font-bold text-green-600">
@@ -743,7 +749,7 @@ export default function BibliotecaCanticorum() {
                           <p className="text-sm text-muted-foreground">Tipos litúrgicos cobertos</p>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-2 text-xs">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                           {tiposLiturgicos.map((tipo) => (
                             <div
                               key={tipo}
